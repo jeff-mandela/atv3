@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos de CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#cascata">Regra da Cascata</a></li>
+                <li><a href="#especificidade">Especificidade</a></li>
+                <li><a href="#combinacao">Combinação de Seletores</a></li>
+                <li><a href="#pseudo">Pseudo-classes</a></li>
+                <li><a href="#display">Display Inline vs Block</a></li>
+                <li><a href="#padroes">Elementos Padrão</a></li>
+                <li><a href="#box-model">Box Model</a></li>
+                <li><a href="#box-sizing">Box Sizing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cascata">
+            <h1>Como funciona a regra da cascata no CSS?</h1>
+            <p>A regra da cascata define a ordem de aplicação dos estilos quando há conflitos. A prioridade é determinada por: <strong>importância</strong> (uso do <code>!important</code>), <strong>especificidade</strong> e <strong>ordem</strong> no código.</p>
+        </section>
+
+        <section id="especificidade">
+            <h1>Especificidade no CSS</h1>
+            <p>É a forma como o CSS calcula qual seletor tem mais peso:</p>
+            <ul>
+                <li><strong>Tag:</strong> Menor peso (ex: <code>p</code>)</li>
+                <li><strong>Classe:</strong> Peso intermediário (ex: <code>.titulo</code>)</li>
+                <li><strong>ID:</strong> Maior peso (ex: <code>#principal</code>)</li>
+            </ul>
+        </section>
+
+        <section id="combinacao">
+            <h1>Combinação de Seletores</h1>
+            <p>Exemplos:</p>
+            <ul>
+                <li><code>.primeiro h1</code>: Seleciona <code>h1</code> dentro de qualquer elemento com classe <code>primeiro</code></li>
+                <li><code>.primeira > h1</code>: Seleciona apenas <code>h1</code> filho direto</li>
+                <li><code>.primeira h1 + h1</code>: Seleciona o <code>h1</code> que vem imediatamente após outro <code>h1</code></li>
+            </ul>
+        </section>
+
+        <section id="pseudo">
+            <h1>Pseudo-classes</h1>
+            <p>Servem para estilizar elementos em estados específicos:</p>
+            <ul>
+                <li><code>:first-child</code> → Primeiro filho</li>
+                <li><code>:last-child</code> → Último filho</li>
+                <li><code>:nth-child(n)</code> → Filho de número específico</li>
+                <li><code>:nth-of-type(n)</code> → Filho de determinado tipo</li>
+            </ul>
+        </section>
+
+        <section id="display">
+            <h1>Display Inline vs Block</h1>
+            <p><strong>Inline:</strong> Ocupa apenas o conteúdo (ex: <code>span</code>). Não aceita altura/largura.</p>
+            <p><strong>Block:</strong> Ocupa toda a largura disponível (ex: <code>div</code>, <code>p</code>).</p>
+        </section>
+
+        <section id="padroes">
+            <h1>Elementos por padrão</h1>
+            <ul>
+                <li><strong>Block:</strong> div, section, p, h1-h6</li>
+                <li><strong>Inline:</strong> span, a, strong</li>
+            </ul>
+        </section>
+
+        <section id="box-model">
+            <h1>Box Model</h1>
+            <p>O modelo de caixa é composto por: <strong>content, padding, border e margin</strong>. Exemplo de shorthand:</p>
+            <ul>
+                <li>1 valor: <code>margin: 10px;</code></li>
+                <li>2 valores: <code>margin: 10px 20px;</code></li>
+                <li>3 valores: <code>margin: 10px 20px 30px;</code></li>
+                <li>4 valores: <code>margin: 10px 20px 30px 40px;</code></li>
+            </ul>
+        </section>
+
+        <section id="box-sizing">
+            <h1>Box Sizing</h1>
+            <p><code>box-sizing: border-box;</code> faz com que padding e border sejam incluídos no tamanho total do elemento.</p>
+        </section>
+    </main>
+</body>
+</html>
